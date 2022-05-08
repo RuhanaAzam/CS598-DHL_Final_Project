@@ -11,8 +11,10 @@ The two baselines model utilize are run with `Python 2.7`. The dependencies are 
 The code for med2vec is slighly modified from it's [original implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
 
 `cd med2vec`
-Preprocess MIMIC-III: `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
-Train + Evaluate Model: `python med2vec.py MIMIC-III.seqs 4894 ./output/model --label_file MIMIC-III.3digitICD9.seqs --n_output_codes 942 --batch_size 100 `
+
+**Preprocess MIMIC-III:** `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
+
+**Train + Evaluate Model:** `python med2vec.py MIMIC-III.seqs 4894 ./output/model --label_file MIMIC-III.3digitICD9.seqs --n_output_codes 942 --batch_size 100 `
 
 ### DoctorAI
 The code for DoctorAI is slighly modified from it's [original implementation](https://github.com/mp2893/doctorai) base off the paper "Doctor AI: Predicting Clinical Events via Recurrent Neural Networks" [3]. 
@@ -38,8 +40,8 @@ This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the tex
 ### Running the Model
 1. Format the data: `python format_data.py`
 2. `mv mimic_III.npy ./HORDE-pytorch/data`, `cd HORDE-pytorch` 
-3. Preprocess data: `python process_data.py`
-4. Train + Evaluate Model: `python main.py`
+3. **Preprocess data:** `python process_data.py`
+4. **Train + Evaluate Model:** `python main.py`
 
 ## References
 [1] D. Lee, X. Jiang, and H. Yu, “Harmonized representation learning on dynamic EHR graphs,” J. Biomed. Inform., vol. 106, no. November 2019, p. 103426, 2020.
