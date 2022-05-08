@@ -8,7 +8,17 @@ The experiments are run on the MIMIC-III dataset. Data access can be found after
 The MIMIC-III dataset should be place in `./physionet.org/files/mimiciii/1.4/` directory.
 
 ## Baseline Models
-The two baselines model utilize are run with `Python 2.7`. The dependencies are the following: `theano==1.0.5`, `sklearn==0.0`, `numpy==1.16.6`, `pandas==0.24.2`, `scipy==1.2.3`.
+The two are run on`Python 2.7` and have the same dependencies. 
+The dependencies are the following: 
+  `theano==1.0.5`, 
+  
+  `sklearn==0.0`, 
+  
+  `numpy==1.16.6`, 
+  
+  `pandas==0.24.2`, 
+  
+  `scipy==1.2.3`
 
 ### med2vec
 The code for med2vec is slighly modified from it's [original implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
@@ -33,8 +43,6 @@ The code for this model is a slightly modified version from [HORDE-pytorch](http
 `Python 3.7`, `numpy==`, `torch==`, `torch-geometric==`, `torch_sparse==`
 
 ### Extracting medical entities (via MetaMap)
-To train the HORDE model, we are interesting in untilizing clinical notes but only medical entities. MetaMap will allow us to extract unified medical language system (UMLS) only.
-
 1. Format the data for MetaMap: `cd MetaMap`, `python preprocess.py`. This will output a file named `mimic_notes.txt`.
 2. Pass this file though National Library of Medicine (NLM) [Batch MetaMap](https://ii.nlm.nih.gov/Batch/UTS_Required/MetaMap.html) interface. You need permission and agree to comply with UMLS Metathesaurus License first. For my experiment, I chose two flags "Unformatted XML Output (`--XMLn`)" and "Word Sense Disambiguation (`-y`)". And retricted semantic types to the following `anab, comd, clnd, diap, dsyn, drdd, hops, horm, topp`.
 3. Place the "text.out" file inside the MetaMap directory.
