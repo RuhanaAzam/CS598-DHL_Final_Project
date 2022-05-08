@@ -1,1 +1,1 @@
-# CS598-DHL_Final_Project
+# Reproducibility of Harmonized Representation Learning on Dynamic EHR (HORDE)
