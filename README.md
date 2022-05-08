@@ -1,6 +1,6 @@
 # Reproducibility of Harmonized Representation Learning on Dynamic EHR
 
-This following is the code and instructions necessary for my attempt to reproduce the results from ["Harmonized representation learning on dynamic EHR graphs"](https://www.sciencedirect.com/science/article/pii/S153204642030054X) [1]. The oringal repo for the paper can be found [here](https://github.com/donalee/HORDE).
+This following is the code and instructions necessary for my attempt to reproduce the results from ["Harmonized representation learning on dynamic EHR graphs"](https://www.sciencedirect.com/science/article/pii/S153204642030054X) [1]. The original repo for the paper can be found [here](https://github.com/donalee/HORDE).
 
 The experiments are run on the MIMIC-III dataset which can be found after completing the “Data or Specimens Only Research” [CITI training course](https://www.citiprogram.org/index.cfm?pageID=154&icat=0&ac=0) and submitting an request to access MIMIC-III though [PhysioNet](https://physionet.org/). The files of the dataset are expected to be contained this this directory `./physionet.org/files/mimiciii/1.4/`.
 
