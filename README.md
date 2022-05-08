@@ -38,10 +38,11 @@ To train the HORDE model, we are interesting in untilizing clinical notes but on
 This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the text column only contains UMLS entities. 
 
 ### Running the Model
-1. Format the data: `python format_data.py`
-2. `mv mimic_III.npy ./HORDE-pytorch/data`, `cd HORDE-pytorch` 
-3. **Preprocess data:** `python process_data.py`
-4. **Train + Evaluate Model:** `python main.py`
+**Format data:** `python format_data.py`, `mv mimic_III.npy ./HORDE-pytorch/data`, `cd HORDE-pytorch` 
+
+**Preprocess data:** `python process_data.py`
+
+**Train + Evaluate Model:** `python main.py`
 
 ## References
 [1] D. Lee, X. Jiang, and H. Yu, “Harmonized representation learning on dynamic EHR graphs,” J. Biomed. Inform., vol. 106, no. November 2019, p. 103426, 2020.
