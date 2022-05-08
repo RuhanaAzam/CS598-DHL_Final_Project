@@ -37,6 +37,8 @@ This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the tex
 
 ## References
 [1] D. Lee, X. Jiang, and H. Yu, “Harmonized representation learning on dynamic EHR graphs,” J. Biomed. Inform., vol. 106, no. November 2019, p. 103426, 2020.
+
 [2] E. Choi et al., “Multi-layer representation learning for medical concepts,” Proc. ACM SIGKDD Int. Conf. Knowl. Discov. Data Min., vol. 13-17-Augu, pp. 1495–1504, 2016.
+
 [3] E. Choi, M. T. Bahadori, A. Schuetz, W. F. Stewart, and J. Sun, “Doctor AI: Predicting Clinical Events via Recurrent Neural Networks.,” JMLR Workshop Conf. Proc., vol. 56, pp. 301–318, 2016.
 
