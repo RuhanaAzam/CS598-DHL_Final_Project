@@ -19,6 +19,8 @@ The code for med2vec is slighly modified from it's [original implementation](htt
 ### DoctorAI
 The code for DoctorAI is slighly modified from it's [original implementation](https://github.com/mp2893/doctorai) base off the paper "Doctor AI: Predicting Clinical Events via Recurrent Neural Networks" [3]. 
 
+**Preprocess MIMIC-III:** python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III
+
 [WRITE THIS LATER]
 
 ## HORDE
