@@ -10,7 +10,7 @@ The two baselines model utilize are run with `Python 2.7`. The dependencies are 
 ### med2vec
 The code for med2vec is slighly modified from it's [original implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
 
-`cd med2vec`
+**Working Directory:**`cd med2vec`
 
 **Preprocess MIMIC-III:** `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
 
