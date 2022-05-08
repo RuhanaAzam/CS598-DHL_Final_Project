@@ -31,8 +31,7 @@ The code for DoctorAI is slighly modified from it's [original implementation](ht
 ## HORDE
 The code for this model is a slightly modified version from [HORDE-pytorch](https://github.com/Lishany/HORDE-pytorch) repository.
 
-[WRITE THIS LATER]
-`Python 3.7`, `numpy==`, `torch==`, `torch-geometric==`, `torch_sparse==`
+The model is run with `Python 3.9` with the following dependencies:`numpy==1.22.3`, `sklearn==1.0.2`,`torch==1.11`, `torch-geometric==2.0.4`, `torch_sparse==1.11`, `scipy==1.8.0`
 
 ### Extracting medical entities (via MetaMap)
 1. Format the data for MetaMap: `cd MetaMap`, `python preprocess.py`. This will output a file named `mimic_notes.txt`.
@@ -43,7 +42,9 @@ The code for this model is a slightly modified version from [HORDE-pytorch](http
 This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the text column only contains UMLS entities. 
 
 ### Running the Model
-**Format data:** `python format_data.py`, `mv mimic_III.npy ./HORDE-pytorch/data`, `cd HORDE-pytorch` 
+**Format data:** `python format_data.py`, `mv mimic_III.npy ./HORDE-pytorch/data`
+
+**Working Directory:** `cd HORDE-pytorch` 
 
 **Preprocess data:** `python process_data.py`
 
