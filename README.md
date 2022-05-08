@@ -13,7 +13,7 @@ The baseline models use `Python 2.7` and share the following dependencies: `thea
 ### med2vec
 The code for med2vec is slighly modified from it's [original implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
 
-**Working Directory:**`cd med2vec`
+**Working Directory:** `cd med2vec`
 
 **Preprocess MIMIC-III:** `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
 
@@ -22,7 +22,7 @@ The code for med2vec is slighly modified from it's [original implementation](htt
 ### DoctorAI
 The code for DoctorAI is slighly modified from it's [original implementation](https://github.com/mp2893/doctorai) base off the paper "Doctor AI: Predicting Clinical Events via Recurrent Neural Networks" [3]. 
 
-**Working Directory:**`cd doctorai`
+**Working Directory:** `cd doctorai`
 
 **Preprocess MIMIC-III:** `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
 
