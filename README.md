@@ -8,8 +8,7 @@ The experiments are run on the MIMIC-III dataset. Data access can be found after
 The MIMIC-III dataset should be place in `./physionet.org/files/mimiciii/1.4/` directory.
 
 ## Baseline Models
-The baseline models use `Python 2.7` and share the dependencies. 
-The dependencies are the following: `theano==1.0.5`, `sklearn==0.0`, `numpy==1.16.6`, `pandas==0.24.2`, `scipy==1.2.3`
+The baseline models use `Python 2.7` and share the following dependencies: `theano==1.0.5`, `sklearn==0.0`, `numpy==1.16.6`, `pandas==0.24.2`, `scipy==1.2.3`
 
 ### med2vec
 The code for med2vec is slighly modified from it's [original implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
