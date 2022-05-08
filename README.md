@@ -8,10 +8,19 @@ The experiments are run on the MIMIC-III dataset which can be found after comple
 The two baselines model utilize are run with `Python 2.7`. The dependencies are the following: `theano==1.0.5`, `sklearn==0.0`, `numpy==1.16.6`, `pandas==0.24.2`, `scipy==1.2.3`.
 
 ### med2vec
+The code for med2vec is slighly modified from it's [oringal implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
+
+`cd med2vec`
+Preprocess MIMIC-III: `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
+Train + Evaluate Mode: `python med2vec.py MIMIC-III.seqs 4894 ./output/model --label_file MIMIC-III.3digitICD9.seqs --n_output_codes 942 --batch_size 100 `
 
 ### DoctorAI
+The code for DoctorAI is slighly modified from it's [oringal implementation](https://github.com/mp2893/doctorai) base off the paper "Doctor AI: Predicting Clinical Events via Recurrent Neural Networks" [3]. 
+
+[WRITE THIS LATER]
 
 ## HORDE
+[WRITE THIS LATER]
 
 ### Extracting medical entites (via MetaMap)
 To train the HORDE model, we are interesting in untilizing clinical notes but only medical entities. MetaMap will allow us to extract unified medical language system (UMLS) only.
@@ -22,4 +31,12 @@ To train the HORDE model, we are interesting in untilizing clinical notes but on
 4. Format output file: `python postprocess.py`
 
 This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the text column only contains UMLS entities. 
+
+### Running the Model
+[WRITE THIS LATER]
+
+## References
+[1] D. Lee, X. Jiang, and H. Yu, “Harmonized representation learning on dynamic EHR graphs,” J. Biomed. Inform., vol. 106, no. November 2019, p. 103426, 2020.
+[2] E. Choi et al., “Multi-layer representation learning for medical concepts,” Proc. ACM SIGKDD Int. Conf. Knowl. Discov. Data Min., vol. 13-17-Augu, pp. 1495–1504, 2016.
+[3] E. Choi, M. T. Bahadori, A. Schuetz, W. F. Stewart, and J. Sun, “Doctor AI: Predicting Clinical Events via Recurrent Neural Networks.,” JMLR Workshop Conf. Proc., vol. 56, pp. 301–318, 2016.
 
