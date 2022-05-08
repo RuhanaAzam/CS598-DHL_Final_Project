@@ -1,6 +1,6 @@
 # Reproducibility of Harmonized Representation Learning on Dynamic EHR
 
-This following is the code and instructions necessary for my attempt to reproduce the results from ["Harmonized representation learning on dynamic EHR graphs"](https://www.sciencedirect.com/science/article/pii/S153204642030054X) [1]. The oringal repo for the paper can be found [here](https://github.com/donalee/HORDE).
+This following is the code and instructions necessary for my attempt to reproduce the results from ["Harmonized representation learning on dynamic EHR graphs"](https://www.sciencedirect.com/science/article/pii/S153204642030054X) [1]. The original repo for the paper can be found [here](https://github.com/donalee/HORDE).
 
 The experiments are run on the MIMIC-III dataset which can be found after completing the “Data or Specimens Only Research” [CITI training course](https://www.citiprogram.org/index.cfm?pageID=154&icat=0&ac=0) and submitting an request to access MIMIC-III though [PhysioNet](https://physionet.org/). The files of the dataset are expected to be contained this this directory `./physionet.org/files/mimiciii/1.4/`.
 
@@ -10,7 +10,7 @@ The two baselines model utilize are run with `Python 2.7`. The dependencies are 
 ### med2vec
 The code for med2vec is slighly modified from it's [original implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
 
-`cd med2vec`
+**Working Directory:**`cd med2vec`
 
 **Preprocess MIMIC-III:** `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
 
@@ -18,6 +18,8 @@ The code for med2vec is slighly modified from it's [original implementation](htt
 
 ### DoctorAI
 The code for DoctorAI is slighly modified from it's [original implementation](https://github.com/mp2893/doctorai) base off the paper "Doctor AI: Predicting Clinical Events via Recurrent Neural Networks" [3]. 
+
+**Preprocess MIMIC-III:** python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III
 
 [WRITE THIS LATER]
 
@@ -43,6 +45,10 @@ This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the tex
 **Preprocess data:** `python process_data.py`
 
 **Train + Evaluate Model:** `python main.py`
+
+## Results
+[ADD HERE]
+
 
 ## References
 [1] D. Lee, X. Jiang, and H. Yu, “Harmonized representation learning on dynamic EHR graphs,” J. Biomed. Inform., vol. 106, no. November 2019, p. 103426, 2020.
