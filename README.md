@@ -8,21 +8,26 @@ The experiments are run on the MIMIC-III dataset which can be found after comple
 The two baselines model utilize are run with `Python 2.7`. The dependencies are the following: `theano==1.0.5`, `sklearn==0.0`, `numpy==1.16.6`, `pandas==0.24.2`, `scipy==1.2.3`.
 
 ### med2vec
-The code for med2vec is slighly modified from it's [oringal implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
+The code for med2vec is slighly modified from it's [original implementation](https://github.com/mp2893/med2vec) base off the paper "Multi-layer Representation Learning for Medical Concepts" [2]. 
 
 `cd med2vec`
-Preprocess MIMIC-III: `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
-Train + Evaluate Mode: `python med2vec.py MIMIC-III.seqs 4894 ./output/model --label_file MIMIC-III.3digitICD9.seqs --n_output_codes 942 --batch_size 100 `
+
+**Preprocess MIMIC-III:** `python process_mimic.py ../physionet.org/files/mimiciii/1.4/ADMISSIONS.csv ../physionet.org/files/mimiciii/1.4/DIAGNOSES_ICD.csv MIMIC-III`
+
+**Train + Evaluate Model:** `python med2vec.py MIMIC-III.seqs 4894 ./output/model --label_file MIMIC-III.3digitICD9.seqs --n_output_codes 942 --batch_size 100 `
 
 ### DoctorAI
-The code for DoctorAI is slighly modified from it's [oringal implementation](https://github.com/mp2893/doctorai) base off the paper "Doctor AI: Predicting Clinical Events via Recurrent Neural Networks" [3]. 
+The code for DoctorAI is slighly modified from it's [original implementation](https://github.com/mp2893/doctorai) base off the paper "Doctor AI: Predicting Clinical Events via Recurrent Neural Networks" [3]. 
 
 [WRITE THIS LATER]
 
 ## HORDE
-[WRITE THIS LATER]
+The code for this model is a slightly modified version from [HORDE-pytorch](https://github.com/Lishany/HORDE-pytorch) repository.
 
-### Extracting medical entites (via MetaMap)
+[WRITE THIS LATER]
+`Python 3.7`, `numpy==`, `torch==`, `torch-geometric==`, `torch_sparse==`
+
+### Extracting medical entities (via MetaMap)
 To train the HORDE model, we are interesting in untilizing clinical notes but only medical entities. MetaMap will allow us to extract unified medical language system (UMLS) only.
 
 1. Format the data for MetaMap: `cd MetaMap`, `python preprocess.py`. This will output a file named `mimic_notes.txt`.
@@ -33,7 +38,11 @@ To train the HORDE model, we are interesting in untilizing clinical notes but on
 This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the text column only contains UMLS entities. 
 
 ### Running the Model
-[WRITE THIS LATER]
+**Format data:** `python format_data.py`, `mv mimic_III.npy ./HORDE-pytorch/data`, `cd HORDE-pytorch` 
+
+**Preprocess data:** `python process_data.py`
+
+**Train + Evaluate Model:** `python main.py`
 
 ## References
 [1] D. Lee, X. Jiang, and H. Yu, “Harmonized representation learning on dynamic EHR graphs,” J. Biomed. Inform., vol. 106, no. November 2019, p. 103426, 2020.
