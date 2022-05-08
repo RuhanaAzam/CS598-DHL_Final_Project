@@ -8,7 +8,7 @@ The experiments are run on the MIMIC-III dataset. Data access can be found after
 The MIMIC-III dataset should be place in `./physionet.org/files/mimiciii/1.4/` directory.
 
 ## Baseline Models
-The baseline modeels use `Python 2.7` and have the same dependencies. 
+The baseline models use `Python 2.7` and share the dependencies. 
 The dependencies are the following: `theano==1.0.5`, `sklearn==0.0`, `numpy==1.16.6`, `pandas==0.24.2`, `scipy==1.2.3`
 
 ### med2vec
