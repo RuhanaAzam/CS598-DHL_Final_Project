@@ -44,6 +44,9 @@ This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the tex
 
 **Train + Evaluate Model:** `python main.py`
 
+##Results
+
+
 ## References
 [1] D. Lee, X. Jiang, and H. Yu, “Harmonized representation learning on dynamic EHR graphs,” J. Biomed. Inform., vol. 106, no. November 2019, p. 103426, 2020.
 
