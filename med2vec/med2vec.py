@@ -217,12 +217,11 @@ def precision_recall(y, y_hat, k=20):
 		y_ki = np.where(y[i] == 1)[0] #find true labels only
 		union = np.intersect1d(y_ki, y_hat_k[i], assume_unique=True)
 
-		#the denominator of PRECISION MAY BE WRONG!!!!
 		if len(y_ki) > 0:
-			p_i = (1.0 * len(union)) / len(y_ki) #precision for one example
+			r_i = (1.0 * len(union)) / len(y_ki) #page 8 formula [Lee et al 2020]
 		else:
-			p_i = (1.0 * len(union)) / 1 
-		r_i = (1.0 * len(union)) / k #recall for one example
+			r_i = (1.0 * len(union)) / 1 
+		p_i = (1.0 * len(union)) / k #page 8 formula [Lee et al 2020]
 		p_list.append(p_i)
 		r_list.append(r_i)
 
