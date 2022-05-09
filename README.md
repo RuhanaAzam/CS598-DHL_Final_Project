@@ -51,7 +51,7 @@ This will leave`./MetaMap/NOTEEVENT.csv`. This is `NOTEEVENT.csv` except the tex
 **Train + Evaluate Model:** `python main.py`
 
 ## Results
-[ADD HERE]
+![Results are here:](https://github.com/RuhanaAzam/CS598-DHL_Final_Project/blob/main/results.png)
 
 
 ## References
